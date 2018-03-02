@@ -8,7 +8,7 @@ import { sync } from 'vuex-router-sync';
 
 import * as filters from './filters';
 
-import axios from 'src/assets/scripts/http';
+// import axios from 'src/assets/scripts/http';
 
 import { rem } from 'src/assets/scripts/rem';
 rem();
@@ -20,11 +20,16 @@ Object.keys(filters).forEach(key => {
 });
 
 import mixins from './mixins';
-
 Vue.mixin(mixins);
 
+// import axios from 'axios'
+// console.info('axios', axios)
+// Vue.prototype.axios = axios 组件调用this.axios.get(...)
+// Vue.prototype.$ajax = axios  换个名字 组件调用this.$ajax.get(...)
+// window.axios = axios; //组件中调用 axios.get(...)
+
 // 将axios挂载到vue对象的原型下边以实现全局通用
-Vue.prototype.axios = axios;
+// Vue.prototype.axios = axios;
 
 //mint-ui
 import MessageBox from 'mint-ui/lib/message-box';
